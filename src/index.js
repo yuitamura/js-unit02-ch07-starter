@@ -68,16 +68,17 @@ const onSubmit = async () => {
   const passwordInput = document.getElementById('password');
   const nameInput = document.getElementById('name');
   const usernameInput = document.getElementById('username');
-  const emailVal = emailInput.value;
-  const passwordVal = passwordInput.value;
-  const nameVal = nameInput.value;
-  const usernameVal = usernameInput.value;
+  const email = emailInput.value;
+  const password = passwordInput.value;
+  const name = nameInput.value;
+  const username = usernameInput.value;
   const params = {
-    email: emailVal,
-    password: passwordVal,
-    username: usernameVal,
-    name: nameVal
+    email,
+    password,
+    username,
+    name
   }
+
   const results = await validate(params);
   if (
     results[0].success && 
